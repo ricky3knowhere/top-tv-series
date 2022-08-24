@@ -17,11 +17,33 @@ $dark-color:#0D0D0D
 $light-color:#f2f2f2
 $gray-color:#9b9b9b
 
+$areas: (1:a, 2:b, 3:c, 4:d, 5:e)
+
 /* RESET
 *, html, body
   padding: 0
   margin: 0
   font-family: 'Poppins', sans-serif
+  color: $text-color
+
+
+/* MIXIN
+@mixin text-box()
+  h5
+    color: $primary-color 
+    font-size: 1.2rem
+    margin-bottom: 4px
+  h3
+    font-family: 'Montserrat', sans-serif
+    font-size: 2.1rem
+    font-weight: 800
+    margin-bottom: .4em
+  p
+    text-align: justify
+    padding-right: 6em
+  
+  
+  
 /* NAVBAR
 .navbar
   display: flex
@@ -43,7 +65,7 @@ $gray-color:#9b9b9b
         content: ""
         display: block
         width: 80%
-        border-bottom: $light-color solid 3px
+        border-bottom: $ternary-color solid 3px
         border-radius: 3px
         margin-top: 5px
         margin-left: 2.5em
@@ -61,10 +83,14 @@ $gray-color:#9b9b9b
 main .container
   margin: 0 2em
 
+main .wave
+  position: relative
+  // margin-top: -10em
+  
 /* HERO
 #hero 
   // background: $secondary-color
-  margin-bottom: 10em
+  margin-bottom: 4em
   .row
     margin-top: 2em
     display: flex
@@ -83,7 +109,7 @@ main .container
         // margin-right: 1.5em
         height: 15em
         border-radius: 1em
-        background-image: url(https://source.unsplash.com/random/108x192?movies)
+        // background-image: url(https://source.unsplash.com/random/108x192?movies)
         background-size: cover
         background-position: center
         box-shadow: 2px 2px 10px $text-color
@@ -122,20 +148,115 @@ main .container
       margin-left: 7em
       bottom: 0
       width: 55%
-      h5
-        color: $gray-color
-        font-size: 1.2rem
-        margin-bottom: 4px
-      h3
-        font-family: 'Montserrat', sans-serif
-        font-size: 2.1rem
-        font-weight: 800
-        margin-bottom: 4px
-      p
-        text-align: justify
+      @include text-box
     .image-wrapper 
       display: grid
       align-items: flex-end
       img
         width: 85%
         justify-self: center
+
+/* TOP2022
+#top2022 
+  background: lighten($secondary-color, 35)
+  margin-top: -16em
+  .row.header
+    padding-top: 5em
+    display: flex
+    justify-content: space-between
+    position: relative
+    height: 30em
+    .text-wrapper
+      display: grid
+      width: 50%
+      // display: flex
+      margin-left: 1.5em
+      align-content: center
+      @include text-box()
+      
+    .image-wrapper 
+      display: grid
+      // align-items: flex-end
+      img
+        padding-top: 2em
+        width: 85%
+        justify-self: center
+  
+  .row.content
+    padding-top: 8em
+    display: grid
+    grid-template-areas: 'a1 a2' 'b1 b2' 'c1 c2' 'd1 d2' 'e1 e2' 
+    row-gap: 5em
+    justify-items: center
+    position: relative
+    .info-wrapper, image-wrapper
+      display: block
+      margin: 0
+    .info-wrapper.row-2
+      display: grid
+      justify-content: left
+      // background: red
+    .info-wrapper
+      // grid-area: a1
+      // width: 80%
+      display: grid
+      margin-left: 5em
+      position: relative
+      align-content: center
+      right: 0
+        // width: 80%
+        // grid-area: b2
+      h3
+        font-size: 1.5rem
+        margin-left: -1.2em
+      .detail 
+        margin-top: .5em
+        span
+          padding: 0 .3em
+        .date
+          color: $gray-color
+        .studio
+          color: $secondary-color
+        .fa-star
+          padding-left: .3em
+          color: $ternary-color
+      .genre-wrapper 
+        margin-top: .8em
+        .genre
+          padding: .5em 1em
+          margin-right: .5em
+          background: lighten($info-color, 33)
+          border-radius: .6em
+          color: $info-color
+          font-size: .8rem
+          font-weight: 500
+      .desc
+        padding-top: 1em
+        text-align: justify
+        
+    .image-wrapper
+      grid-area: a2
+      // width: 80%
+      display: grid
+      box-shadow: 2px 2px 10px $text-light-color
+      border-radius: 1em
+      overflow: hidden
+      width: 20em
+      height: 20em
+      transform: rotate(-8deg)
+      // width: 100%
+      // justify-content: center
+      &:hover img
+        transform: scale(1.2) rotate(8deg)
+      @each $i, $area in $areas
+        &.row-#{$i}
+          @if $i % 2 == 0
+            grid-area: #{$area}1
+          @else 
+            grid-area: #{$area}2
+          margin-top: 1em
+        
+      img
+        width: 105%
+        justify-self: center
+        transition: all 0.3s ease

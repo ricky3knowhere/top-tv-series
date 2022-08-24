@@ -6,8 +6,10 @@
   padding: 0;
   margin: 0;
   font-family: "Poppins", sans-serif;
+  color: #012840;
 }
 
+/* MIXIN */
 /* NAVBAR */
 .navbar {
   display: flex;
@@ -33,7 +35,7 @@
   content: "";
   display: block;
   width: 80%;
-  border-bottom: #f2f2f2 solid 3px;
+  border-bottom: #FFC931 solid 3px;
   border-radius: 3px;
   margin-top: 5px;
   margin-left: 2.5em;
@@ -55,9 +57,13 @@ main .container {
   margin: 0 2em;
 }
 
+main .wave {
+  position: relative;
+}
+
 /* HERO */
 #hero {
-  margin-bottom: 10em;
+  margin-bottom: 4em;
 }
 #hero .row {
   margin-top: 2em;
@@ -76,7 +82,6 @@ main .container {
   width: 25%;
   height: 15em;
   border-radius: 1em;
-  background-image: url(https://source.unsplash.com/random/108x192?movies);
   background-size: cover;
   background-position: center;
   box-shadow: 2px 2px 10px #012840;
@@ -124,7 +129,7 @@ main .container {
   width: 55%;
 }
 #hero .row .text-wrapper h5 {
-  color: #9b9b9b;
+  color: #F2527D;
   font-size: 1.2rem;
   margin-bottom: 4px;
 }
@@ -132,10 +137,11 @@ main .container {
   font-family: "Montserrat", sans-serif;
   font-size: 2.1rem;
   font-weight: 800;
-  margin-bottom: 4px;
+  margin-bottom: 0.4em;
 }
 #hero .row .text-wrapper p {
   text-align: justify;
+  padding-right: 6em;
 }
 #hero .row .image-wrapper {
   display: grid;
@@ -144,6 +150,145 @@ main .container {
 #hero .row .image-wrapper img {
   width: 85%;
   justify-self: center;
+}
+
+/* TOP2022 */
+#top2022 {
+  background: #f1f2fe;
+  margin-top: -16em;
+}
+#top2022 .row.header {
+  padding-top: 5em;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  height: 30em;
+}
+#top2022 .row.header .text-wrapper {
+  display: grid;
+  width: 50%;
+  margin-left: 1.5em;
+  align-content: center;
+}
+#top2022 .row.header .text-wrapper h5 {
+  color: #F2527D;
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+#top2022 .row.header .text-wrapper h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.1rem;
+  font-weight: 800;
+  margin-bottom: 0.4em;
+}
+#top2022 .row.header .text-wrapper p {
+  text-align: justify;
+  padding-right: 6em;
+}
+#top2022 .row.header .image-wrapper {
+  display: grid;
+}
+#top2022 .row.header .image-wrapper img {
+  padding-top: 2em;
+  width: 85%;
+  justify-self: center;
+}
+#top2022 .row.content {
+  padding-top: 8em;
+  display: grid;
+  grid-template-areas: "a1 a2" "b1 b2" "c1 c2" "d1 d2" "e1 e2";
+  row-gap: 5em;
+  justify-items: center;
+  position: relative;
+}
+#top2022 .row.content .info-wrapper, #top2022 .row.content image-wrapper {
+  display: block;
+  margin: 0;
+}
+#top2022 .row.content .info-wrapper.row-2 {
+  display: grid;
+  justify-content: left;
+}
+#top2022 .row.content .info-wrapper {
+  display: grid;
+  margin-left: 5em;
+  position: relative;
+  align-content: center;
+  right: 0;
+}
+#top2022 .row.content .info-wrapper h3 {
+  font-size: 1.5rem;
+  margin-left: -1.2em;
+}
+#top2022 .row.content .info-wrapper .detail {
+  margin-top: 0.5em;
+}
+#top2022 .row.content .info-wrapper .detail span {
+  padding: 0 0.3em;
+}
+#top2022 .row.content .info-wrapper .detail .date {
+  color: #9b9b9b;
+}
+#top2022 .row.content .info-wrapper .detail .studio {
+  color: #4B53F2;
+}
+#top2022 .row.content .info-wrapper .detail .fa-star {
+  padding-left: 0.3em;
+  color: #FFC931;
+}
+#top2022 .row.content .info-wrapper .genre-wrapper {
+  margin-top: 0.8em;
+}
+#top2022 .row.content .info-wrapper .genre-wrapper .genre {
+  padding: 0.5em 1em;
+  margin-right: 0.5em;
+  background: #c0eaf3;
+  border-radius: 0.6em;
+  color: #32BAD9;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+#top2022 .row.content .info-wrapper .desc {
+  padding-top: 1em;
+  text-align: justify;
+}
+#top2022 .row.content .image-wrapper {
+  grid-area: a2;
+  display: grid;
+  box-shadow: 2px 2px 10px #002547;
+  border-radius: 1em;
+  overflow: hidden;
+  width: 20em;
+  height: 20em;
+  transform: rotate(-8deg);
+}
+#top2022 .row.content .image-wrapper:hover img {
+  transform: scale(1.2) rotate(8deg);
+}
+#top2022 .row.content .image-wrapper.row-1 {
+  grid-area: a2;
+  margin-top: 1em;
+}
+#top2022 .row.content .image-wrapper.row-2 {
+  grid-area: b1;
+  margin-top: 1em;
+}
+#top2022 .row.content .image-wrapper.row-3 {
+  grid-area: c2;
+  margin-top: 1em;
+}
+#top2022 .row.content .image-wrapper.row-4 {
+  grid-area: d1;
+  margin-top: 1em;
+}
+#top2022 .row.content .image-wrapper.row-5 {
+  grid-area: e2;
+  margin-top: 1em;
+}
+#top2022 .row.content .image-wrapper img {
+  width: 105%;
+  justify-self: center;
+  transition: all 0.3s ease;
 }
 
 /*# sourceMappingURL=style.css.map */
