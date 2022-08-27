@@ -38,6 +38,7 @@ $areas: (1:a, 2:b, 3:c, 4:d, 5:e)
     font-size: 2.1rem
     font-weight: 800
     margin-bottom: .4em
+    text-transform: capitalize
   p
     text-align: justify
     padding-right: 6em
@@ -124,7 +125,7 @@ main .wave
         // background-image: url(https://source.unsplash.com/random/108x192?movies)
         background-size: cover
         background-position: center
-        box-shadow: 2px 2px 10px $text-color
+        box-shadow: 2px 2px 10px $text-light-color
         overflow: hidden
         box-sizing: border-box
         position: relative
@@ -377,3 +378,76 @@ main .wave
             justify-self: right
             .fa-star
               color: $ternary-color !important
+
+
+// WATCHED
+#watched
+  background: lighten($secondary-color, 35)
+  margin-top: -0.5em
+  .row.header
+    @include section-header(0)
+  .row.content
+    padding-top: 5em
+    display: grid
+    justify-items: center
+    padding-bottom: 5em
+    .card
+      .card-header
+        margin-bottom: 1em
+      table
+        background: $light-color
+        border-spacing: 0
+        border-radius: 1em
+        box-shadow: 2px 2px 10px $text-light-color
+        // overflow: hidden
+        padding: 1em
+        
+        thead
+          background: $text-light-color
+          th
+            padding: 1em 1em
+            color: $light-color
+            font-weight: 600
+          th:first-child
+            border-top-left-radius: .5em
+            border-bottom-left-radius: .5em
+          th:last-child
+            border-top-right-radius: .5em
+            border-bottom-right-radius: .5em
+
+        tbody
+          padding-top: 1em
+        td
+          font-size: .9rem
+          padding: .8em 1em
+        
+        td:nth-child(5), td:nth-child(6)
+          text-align: center
+        td:nth-child(2)
+          max-width: 20em
+        td:nth-child(4)
+          max-width: 12em
+        .fa
+          margin-right: 3px
+        .fa-star
+          color: $ternary-color
+        .status
+          padding: .5em 1em
+          // margin-right: .5em
+          background: lighten($secondary-color, 25)
+          border-radius: .6em
+          color: $secondary-color
+          font-size: .8rem
+          font-weight: 500
+          .fa
+            color: $secondary-color
+        .status.pending
+          background: lighten($warning-color, 30)
+          color: $warning-color
+          .fa
+            color: $warning-color
+        .status.done
+          background: lighten($info-color, 33)
+          color: $info-color
+          .fa
+            color: $info-color

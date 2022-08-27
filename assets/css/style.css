@@ -84,7 +84,7 @@ main .wave {
   border-radius: 1em;
   background-size: cover;
   background-position: center;
-  box-shadow: 2px 2px 10px #012840;
+  box-shadow: 2px 2px 10px #002547;
   overflow: hidden;
   box-sizing: border-box;
   position: relative;
@@ -138,6 +138,7 @@ main .wave {
   font-size: 2.1rem;
   font-weight: 800;
   margin-bottom: 0.4em;
+  text-transform: capitalize;
 }
 #hero .row .text-wrapper p {
   text-align: justify;
@@ -180,6 +181,7 @@ main .wave {
   font-size: 2.1rem;
   font-weight: 800;
   margin-bottom: 0.4em;
+  text-transform: capitalize;
 }
 #top2022 .row.header .text-wrapper p {
   text-align: justify;
@@ -311,6 +313,7 @@ main .wave {
   font-size: 2.1rem;
   font-weight: 800;
   margin-bottom: 0.4em;
+  text-transform: capitalize;
 }
 #topAll .row.header .text-wrapper p {
   text-align: justify;
@@ -456,6 +459,119 @@ main .wave {
 }
 #topAll .row.content .card:last-child .container .rating .fa-star {
   color: #FFC931 !important;
+}
+
+#watched {
+  background: #f1f2fe;
+  margin-top: -0.5em;
+}
+#watched .row.header {
+  padding-top: 0em;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  height: 30em;
+}
+#watched .row.header .text-wrapper {
+  display: grid;
+  width: 50%;
+  margin-left: 1.5em;
+  align-content: center;
+}
+#watched .row.header .text-wrapper h5 {
+  color: #F2527D;
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+#watched .row.header .text-wrapper h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.1rem;
+  font-weight: 800;
+  margin-bottom: 0.4em;
+  text-transform: capitalize;
+}
+#watched .row.header .text-wrapper p {
+  text-align: justify;
+  padding-right: 6em;
+}
+#watched .row.content {
+  padding-top: 5em;
+  display: grid;
+  justify-items: center;
+  padding-bottom: 5em;
+}
+#watched .row.content .card .card-header {
+  margin-bottom: 1em;
+}
+#watched .row.content .card table {
+  background: #f2f2f2;
+  border-spacing: 0;
+  border-radius: 1em;
+  box-shadow: 2px 2px 10px #002547;
+  padding: 1em;
+}
+#watched .row.content .card table thead {
+  background: #002547;
+}
+#watched .row.content .card table thead th {
+  padding: 1em 1em;
+  color: #f2f2f2;
+  font-weight: 600;
+}
+#watched .row.content .card table thead th:first-child {
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+}
+#watched .row.content .card table thead th:last-child {
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+}
+#watched .row.content .card table tbody {
+  padding-top: 1em;
+}
+#watched .row.content .card table td {
+  font-size: 0.9rem;
+  padding: 0.8em 1em;
+}
+#watched .row.content .card table td:nth-child(5), #watched .row.content .card table td:nth-child(6) {
+  text-align: center;
+}
+#watched .row.content .card table td:nth-child(2) {
+  max-width: 20em;
+}
+#watched .row.content .card table td:nth-child(4) {
+  max-width: 12em;
+}
+#watched .row.content .card table .fa {
+  margin-right: 3px;
+}
+#watched .row.content .card table .fa-star {
+  color: #FFC931;
+}
+#watched .row.content .card table .status {
+  padding: 0.5em 1em;
+  background: #c2c5fb;
+  border-radius: 0.6em;
+  color: #4B53F2;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+#watched .row.content .card table .status .fa {
+  color: #4B53F2;
+}
+#watched .row.content .card table .status.pending {
+  background: #fbe6c0;
+  color: #F2AE30;
+}
+#watched .row.content .card table .status.pending .fa {
+  color: #F2AE30;
+}
+#watched .row.content .card table .status.done {
+  background: #c0eaf3;
+  color: #32BAD9;
+}
+#watched .row.content .card table .status.done .fa {
+  color: #32BAD9;
 }
 
 /*# sourceMappingURL=style.css.map */
