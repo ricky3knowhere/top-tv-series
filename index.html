@@ -22,11 +22,11 @@
     <nav class="navbar">
       <a href="#!" class="brand">Top TV Series</a>
       <ul>
-        <li><a href="#!" class="link">Home</a></li>
-        <li><a href="#!" class="link">Top 2022</a></li>
-        <li><a href="#!" class="link">Top All the time</a></li>
-        <li><a href="#!" class="link">Watched</a></li>
-        <li><a href="#!" class="link">About Me</a></li>
+        <li><a href="#" class="link">Home</a></li>
+        <li><a href="#top2022" class="link">Top 2022</a></li>
+        <li><a href="#topALl" class="link">Top All the time</a></li>
+        <li><a href="#watched" class="link">Watched</a></li>
+        <li><a href="#profile" class="link">About Me</a></li>
       </ul>
     </nav>
   </header>
@@ -74,7 +74,7 @@
     <!-- TOP2022 START -->
     <section id="top2022">
       <div class="container">
-        <div class="row header">
+        <header class="row header">
           <div class="text-wrapper">
             <h5>Top TV Series 2022</h5>
             <h3>Full With Amazing Series</h3>
@@ -83,7 +83,7 @@
           <div class="image-wrapper">
             <img src="assets/images/couch-tv.png" alt="couch-tv">
           </div>
-        </div>
+        </header>
 
         <div class="row content">
           <div class="info-wrapper row-1">
@@ -200,7 +200,7 @@
     <!-- TOP ALL THE TIME START -->
     <section id="topAll">
       <div class="container">
-        <div class="row header">
+        <header class="row header">
           <div class="text-wrapper">
             <h5>Top TV Series All The Time</h5>
             <h3>Masterpiece Comes From an Incredible Creator</h3>
@@ -209,7 +209,7 @@
           <div class="image-wrapper">
             <img src="assets/images/movie.png" alt="movie">
           </div>
-        </div>
+        </header>
 
         <div class="row content">
           <div class="card">
@@ -341,7 +341,7 @@
         </div>
     </section>
     <!-- TOP ALL THE TIME END -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" id="allTimeWave">
       <path fill="#f1f2fe" fill-opacity="1"
         d="M0,32L48,64C96,96,192,160,288,176C384,192,480,160,576,149.3C672,139,768,149,864,165.3C960,181,1056,203,1152,186.7C1248,171,1344,117,1392,90.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
       </path>
@@ -350,7 +350,7 @@
     <!-- WATCHED START -->
     <section id="watched">
       <div class="container">
-        <div class="row header">
+        <header class="row header">
           <div class="text-wrapper">
             <h5>TV Series I've Watched</h5>
             <h3>Enjoy the holidays with exciting stories</h3>
@@ -362,7 +362,7 @@
           <div class="image-wrapper">
             <img src="assets/images/viewer.png" alt="viewer">
           </div>
-        </div>
+        </header>
 
         <div class="row content">
           <div class="card">
@@ -414,7 +414,104 @@
       </div>
     </section>
     <!-- WATCHED END -->
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#F1F2FE" fill-opacity="1"
+        d="M0,224L60,208C120,192,240,160,360,160C480,160,600,192,720,176C840,160,960,96,1080,74.7C1200,53,1320,75,1380,85.3L1440,96L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
+      </path>
+    </svg>
+
+    <!-- PROFILE START -->
+    <section id="profile">
+      <aside class="container">
+        <header class="row header">
+          <div class="text-wrapper">
+            <h5>Hello there 👋🏼, I'm</h5>
+            <h3>Ricky Muhammad Ridwan</h3>
+            <span class="tagline"><b>Web Developer</b> | Philosopher | Weebs</span>
+            <p class="desc">
+              An informatics engineering student who masters several programming languages, always follows technological
+              developments, especially web programming, and has made several web projects that have been uploaded to
+              <a href="https://github.com/ricky03knowhere" target="_blank">github.com</a>.
+            </p>
+            <a href="https://t.me/ricky_ackerman07" target="_blank" class="contact-button"><i
+                class="fa fa-paper-plane"></i>Contact Me</a>
+          </div>
+          <div class="image-wrapper">
+            <img src="assets/images/IMG-20200211-WA0010.png" alt="profile">
+            <span class="splash">
+              <svg width="700" height="700" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <clipPath id="shape">
+                    <path fill="currentColor"
+                      d="M772,646.5Q669,793,498,796.5Q327,800,191.5,650Q56,500,197.5,360.5Q339,221,516,193.5Q693,166,784,333Q875,500,772,646.5Z">
+                    </path>
+                  </clipPath>
+                </defs>
+                <g clip-path="url(#shape)">
+                  <path fill="#32BAD9"
+                    d="M772,646.5Q669,793,498,796.5Q327,800,191.5,650Q56,500,197.5,360.5Q339,221,516,193.5Q693,166,784,333Q875,500,772,646.5Z" />
+                </g>
+              </svg>
+            </span>
+          </div>
+        </header>
+        </asi>
+
+        <div class="row content"></div>
+        </div>
+    </section>
+    <!-- PROFILE END -->
   </main>
+
+  <a id="toTop" href="#">
+    <i class="fa fa-angle-double-up me-2"></i>
+  </a>
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#4B53F2" fill-opacity="1"
+      d="M0,96L48,106.7C96,117,192,139,288,138.7C384,139,480,117,576,101.3C672,85,768,75,864,80C960,85,1056,107,1152,117.3C1248,128,1344,128,1392,128L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+    </path>
+  </svg>
+
+
+  <!-- Footer Section Start -->
+  <footer>
+    <div class="container">
+      <!-- Instagram -->
+      <a href="https://instagram.com/ricky_ackerman07" target="_blank"
+        class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+      <i class="fab fa-instagram me-2"></i>
+      </a>
+      <!-- Github -->
+      <a href="https://github.com/ricky03knowhere" target="_blank"
+        class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+        <i class="fab fa-github"></i>
+      </a>
+      <!-- WhatsApp -->
+      <a href="https://wa.me/6285861874609" target="_blank"
+        class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <!-- Youtube -->
+      <a href="https://www.youtube.com/channel/UCLQLvCI-WM-iQExTp9kdG4Q/" target="_blank"
+        class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <!-- Facebook -->
+      <a href="https://facebook.com/edricky.infinitystones" target="_blank"
+        class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+        <i class="fab fa-facebook-square"></i>
+      </a>
+    </div>
+    <p class="copyright">Made with <span class="text-green-500">❤️</span>
+      <a href="https://instagram.com/ricky_ackerman07" target="_blank" class="font-bold text-primary">Ricky
+        Ackerman</a> &copy; 2022</p>.
+  </div>
+  </footer>
+  <!-- Footer Section End -->
+
+  <script src="assets/js/srcipt.js"></script>
 </body>
 
 </html>

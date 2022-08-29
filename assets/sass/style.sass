@@ -25,7 +25,10 @@ $areas: (1:a, 2:b, 3:c, 4:d, 5:e)
   margin: 0
   font-family: 'Poppins', sans-serif
   color: $text-color
+  scroll-behavior: smooth
 
+body main
+  overflow: hidden
 
 /* MIXIN
 @mixin text-box()
@@ -254,8 +257,12 @@ main .wave
         justify-self: center
         transition: all 0.3s ease
 
+
 // TOP ALL
 #topAll
+  background: lighten($info-color, 30)
+  padding: 18em 0
+  margin-top: -17.5em
   .row.header
     @include section-header(0)
   .row.content
@@ -379,6 +386,8 @@ main .wave
             .fa-star
               color: $ternary-color !important
 
+#allTimeWave
+  margin-top: -12em
 
 // WATCHED
 #watched
@@ -451,3 +460,101 @@ main .wave
           color: $info-color
           .fa
             color: $info-color
+
+// PROFILE
+#profile
+  margin-top: -0.5em
+  .row.header
+    @include section-header(0)
+    .tagline
+      font-size: 1.2rem
+      font-weight: 300
+      color: $gray-color
+      b
+        font-weight: 500
+    .desc
+      padding-top: 1em
+      a
+        color: $info-color
+        &:hover
+          color: lighten($info-color, 20)
+    .contact-button
+      text-decoration: none
+      margin-top: 1.5em
+      padding: .8em 1.2em
+      width: fit-content
+      background: $ternary-color
+      border-radius: .5em
+      &:hover
+        opacity: .85
+      .fa
+        margin-right: 5px
+    .image-wrapper
+      width: 40%
+      position: relative
+      img
+        width: 80%
+      .splash
+        position: absolute
+        top: 0
+        left: 0
+        transform: translate(-23%, -25%)
+        z-index: -999
+    
+
+  .row.content
+    padding-top: 5em
+    display: grid
+    justify-items: center
+    padding-bottom: 5em
+
+
+// TO_TOP
+#toTop
+  width: 3em
+  height: 3em
+  border-radius: 3em
+  text-align: center
+  line-height: 3em
+  background: $ternary-color
+  position: fixed
+  bottom: 5em
+  right: 1em
+  box-shadow: 2px 2px 5px transparentize($text-light-color, .5)
+
+// FOOTER
+footer
+  background: $secondary-color
+  .container
+    margin-top: -1em
+    display: flex
+    justify-content: center
+    a
+      width: 2em
+      height: 2em
+      border-radius: 2em
+      margin: 0 .5em
+      display: flex
+      justify-content: center
+      border: 1.8px $light-color solid
+      text-decoration: none
+      transition: all .3s ease
+      margin-bottom: 2em
+      .fab
+        color: $light-color
+        line-height: 2em
+      &:hover
+        border-color:  $light-color
+        background:  $light-color
+      &:hover .fab
+        color: $secondary-color
+  p
+    font-size: .8rem
+    color: $light-color
+    display: flex
+    justify-content: center
+    a
+      color: $ternary-color
+      text-decoration: none
+      margin: 0 3px
+      font-weight: 500
