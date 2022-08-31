@@ -18,6 +18,8 @@ $light-color:#f2f2f2
 $gray-color:#9b9b9b
 
 $areas: (1:a, 2:b, 3:c, 4:d, 5:e)
+$pictures: (1:'squid.jpg', 2:'dark01.jpg', 3:'loki.jpg', 4:'umac3.jpg', 5:'peace.jpg')
+$heroes: (1:'shehulk.jpg', 2:'squid.jpg', 3:'mandalor01.jpg')
 
 /* RESET
 *, html, body
@@ -125,13 +127,16 @@ main .wave
         // margin-right: 1.5em
         height: 15em
         border-radius: 1em
-        // background-image: url(https://source.unsplash.com/random/108x192?movies)
         background-size: cover
         background-position: center
         box-shadow: 2px 2px 10px $text-light-color
         overflow: hidden
         box-sizing: border-box
         position: relative
+        @each $i, $hero in $heroes
+          &.no#{$i}
+            background: url('../images/#{$hero}') center no-repeat
+            background-size: cover
         padding: 0 1em
         &::after
           content: ''
@@ -281,6 +286,11 @@ main .wave
       position: relative
       overflow: hidden
       transition: all 1s ease
+      @each $i, $picture in $pictures
+        &.no#{$i}
+          background: url('../images/#{$picture}') center no-repeat
+          background-size: cover
+
       &:hover
         cursor: pointer
       &:hover .container
@@ -294,6 +304,7 @@ main .wave
       &:hover  .desc
         opacity: 0
         
+    
       .container
         box-sizing: border-box
         margin: 0
@@ -313,7 +324,10 @@ main .wave
         font-size: 1.5rem
         color: $light-color
         display: inline-block
-        width: 70%
+        width: 8em
+        height: 3em
+        position: relative
+        top: 0
         margin-left: .5em
         // text-align: center
       .detail 
@@ -374,12 +388,16 @@ main .wave
           h5
             font-size: .9rem
             padding-left: 2em
+            height: 3em  
+            width: auto
+            line-height: 3em
           .no
             color: $light-color
             display: inline-block
             position: absolute
             margin-left: -2.5em
           .rating 
+            line-height: 3em
             font-size: .9rem
             color: $light-color
             justify-self: right
@@ -448,6 +466,9 @@ main .wave
           color: $secondary-color
           font-size: .8rem
           font-weight: 500
+          width: 6em
+          display: block
+          text-align: center
           .fa
             color: $secondary-color
         .status.pending

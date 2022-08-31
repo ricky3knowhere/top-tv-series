@@ -95,6 +95,18 @@ main .wave {
   position: relative;
   padding: 0 1em;
 }
+#hero .row .card-wrapper .card.no1 {
+  background: url("../images/shehulk.jpg") center no-repeat;
+  background-size: cover;
+}
+#hero .row .card-wrapper .card.no2 {
+  background: url("../images/squid.jpg") center no-repeat;
+  background-size: cover;
+}
+#hero .row .card-wrapper .card.no3 {
+  background: url("../images/mandalor01.jpg") center no-repeat;
+  background-size: cover;
+}
 #hero .row .card-wrapper .card::after {
   content: "";
   position: absolute;
@@ -347,6 +359,26 @@ main .wave {
   overflow: hidden;
   transition: all 1s ease;
 }
+#topAll .row.content .card.no1 {
+  background: url("../images/squid.jpg") center no-repeat;
+  background-size: cover;
+}
+#topAll .row.content .card.no2 {
+  background: url("../images/dark01.jpg") center no-repeat;
+  background-size: cover;
+}
+#topAll .row.content .card.no3 {
+  background: url("../images/loki.jpg") center no-repeat;
+  background-size: cover;
+}
+#topAll .row.content .card.no4 {
+  background: url("../images/umac3.jpg") center no-repeat;
+  background-size: cover;
+}
+#topAll .row.content .card.no5 {
+  background: url("../images/peace.jpg") center no-repeat;
+  background-size: cover;
+}
 #topAll .row.content .card:hover {
   cursor: pointer;
 }
@@ -385,7 +417,10 @@ main .wave {
   font-size: 1.5rem;
   color: #f2f2f2;
   display: inline-block;
-  width: 70%;
+  width: 8em;
+  height: 3em;
+  position: relative;
+  top: 0;
   margin-left: 0.5em;
 }
 #topAll .row.content .card .detail {
@@ -455,6 +490,9 @@ main .wave {
 #topAll .row.content .card:last-child .container h5 {
   font-size: 0.9rem;
   padding-left: 2em;
+  height: 3em;
+  width: auto;
+  line-height: 3em;
 }
 #topAll .row.content .card:last-child .container .no {
   color: #f2f2f2;
@@ -463,6 +501,7 @@ main .wave {
   margin-left: -2.5em;
 }
 #topAll .row.content .card:last-child .container .rating {
+  line-height: 3em;
   font-size: 0.9rem;
   color: #f2f2f2;
   justify-self: right;
@@ -569,6 +608,9 @@ main .wave {
   color: #4B53F2;
   font-size: 0.8rem;
   font-weight: 500;
+  width: 6em;
+  display: block;
+  text-align: center;
 }
 #watched .row.content .card table .status .fa {
   color: #4B53F2;
